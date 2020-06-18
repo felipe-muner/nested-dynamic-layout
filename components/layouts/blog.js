@@ -1,23 +1,21 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const BlogLayout = ({ children }) => (
   <div className="blog-container">
     <div className="main">{children}</div>
     <div className="sidebar">
       <h3>Blog</h3>
-      {[...Array(50).keys()].map(i => (
-        <div key={i}>
-          <Link href="/blog/page-1">
-            <a>Page 1</a>
-          </Link>
-          <Link href="/blog/page-2">
-            <a>Page 2</a>
-          </Link>
-          <Link href="/blog/page-3">
-            <a>Page 3</a>
-          </Link>
-        </div>
-      ))}
+      <div>
+        <Link href="/blog/page-1">
+          <a>Page 1</a>
+        </Link>
+        <Link href="/blog/page-2">
+          <a>Page 2</a>
+        </Link>
+        <Link href="/blog/page-3">
+          <a>Page 3</a>
+        </Link>
+      </div>
     </div>
 
     <style jsx>{`

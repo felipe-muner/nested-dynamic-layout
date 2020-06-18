@@ -1,23 +1,20 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const DocsLayout = ({ children }) => (
   <div className="docs-container">
     <div className="sidebar">
       <h3>Docs</h3>
-
-      {[...Array(50).keys()].map(i => (
-        <div key={i}>
-          <Link href="/docs/page-1">
-            <a>Page 1</a>
-          </Link>
-          <Link href="/docs/page-2">
-            <a>Page 2</a>
-          </Link>
-          <Link href="/docs/page-3">
-            <a>Page 3</a>
-          </Link>
-        </div>
-      ))}
+      <div>
+        <Link href="/docs/page-1">
+          <a>Page 1</a>
+        </Link>
+        <Link href="/docs/page-2">
+          <a>Page 2</a>
+        </Link>
+        <Link href="/docs/page-3">
+          <a>Page 3</a>
+        </Link>
+      </div>
     </div>
 
     <div className="main">{children}</div>
